@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>@Supports feature detecting in css</title>
+	<style>
+		body{
+			font-family: sans-serif;
+		}
+		@supports (font-size: 1rem) {
+  			body{
+  				background:green;
+  				color:#fff;
+  			}
+		}
+		@supports (width: 2vw){
+  			body{
+  				background:red;
+  			}
+		}
+	</style>
+</head>
+<body>
+	<h1>@Supports feature detecting</h1>
+	<p>Feature detecting with <a href="http://dev.w3.org/csswg/css3-conditional/">@supports</a>
+	</p>
+	<p>If the background is white @supports rules are not called (or @supports is unsupported)</p>
+	<p>If it's red, <abbr title="root em">rem</abbr> unit is supported.
+	</p>
+	<p>If it's green, <abbr title="viewport width">VW</abbr> and or <abbr title="root em">rem</abbr> units are supported.
+	</p>
+</body>
+</html>
